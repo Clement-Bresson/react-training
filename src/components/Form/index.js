@@ -6,18 +6,30 @@ import Input from './components/Input'
 
 class Form extends Component {
 
+  state = {
+    username: '',
+    password: ''
+  }
+
   handleInputChange = (name, value) => {
-    console.log(name, value)
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    console.log(this.state)
   }
 
   render() {
     return (
-      <form id="foo">
+      <form onSubmit={this.handleSubmit} id="foo">
         Form
         <Title>Some title</Title>
         <Input onChange={this.handleInputChange} type="text" name="username" />
         <Input onChange={this.handleInputChange} type="password" name="password" />
-        <Button form="foo" type="button">
+        <Button form="foo" type="submit">
           Button
         </Button>
       </form>

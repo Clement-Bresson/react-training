@@ -4,7 +4,11 @@ exports[`Input renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Input />,
+  Symbol(enzyme.__unrendered__): <Input
+    name="bar"
+    onChange={[MockFunction]}
+    type="text"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,47 +21,14 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <p>
-          
-        </p>,
-        <input
-          name={undefined}
-          onChange={[Function]}
-          type={undefined}
-          value=""
-        />,
-      ],
+      "name": "bar",
+      "onChange": [Function],
+      "type": "text",
+      "value": "",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "name": undefined,
-          "onChange": [Function],
-          "type": undefined,
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-    ],
-    "type": "div",
+    "rendered": null,
+    "type": "input",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -65,47 +36,14 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <p>
-            
-          </p>,
-          <input
-            name={undefined}
-            onChange={[Function]}
-            type={undefined}
-            value=""
-          />,
-        ],
+        "name": "bar",
+        "onChange": [Function],
+        "type": "text",
+        "value": "",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "name": undefined,
-            "onChange": [Function],
-            "type": undefined,
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-      ],
-      "type": "div",
+      "rendered": null,
+      "type": "input",
     },
   ],
   Symbol(enzyme.__options__): Object {

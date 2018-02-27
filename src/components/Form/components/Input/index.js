@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import { PropTypes as T } from 'prop-types'
 
 class Input extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      value: ''
-    }
+
+  state = {
+    value: ''
   }
 
   handleChange = event => {
@@ -19,17 +18,25 @@ class Input extends Component {
     const { name, type } = this.props
     const { value } = this.state
     return (
-      <div>
-        <p>{value}</p>
-        <input
-          name={name}
-          onChange={this.handleChange}
-          type={type}
-          value={value}
-        />
-      </div>
+      <input
+        name={name}
+        onChange={this.handleChange}
+        type={type}
+        value={value}
+      />
     )
   }
+}
+
+Input.defaultProps = {
+  type: 'text'
+}
+
+Input.propTypes = {
+  name: T.string.isRequired,
+  onChange: T.func.isRequired,
+  type: T.string,
+  value: T.string
 }
 
 export default Input
