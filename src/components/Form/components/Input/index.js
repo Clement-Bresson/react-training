@@ -9,9 +9,10 @@ class Input extends Component {
   }
 
   handleChange = event => {
-    this.setState({
-      value: event.target.value
-    })
+    const { onChange, name } = this.props
+    const value = event.target.value
+    this.setState({ value })
+    onChange && onChange(name, value)
   }
 
   render() {
